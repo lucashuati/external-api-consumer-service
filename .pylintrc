@@ -8,3 +8,7 @@ profile=no
 ignore=.git,fabfile.py,migrations
 
 disable=
+    missing-module-docstring,
+
+    # TODO: Remove when fix envirioment pre-commit pylint hook
+    import-error,

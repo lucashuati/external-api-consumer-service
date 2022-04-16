@@ -14,7 +14,7 @@ repos:
     rev: v2.13.5
     hooks:
       - id: pylint
-        args: [--load-plugins pylint_django, --rcfile=.pylintrc]
+        args: [--rcfile=.pylintrc]
   - repo: https://github.com/commitizen-tools/commitizen
     rev: v2.24.0
     hooks:
