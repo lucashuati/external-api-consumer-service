@@ -21,6 +21,14 @@ docker-compose run api python createsuperuser
 
 ```shell
 pip install -r requirements.txt
+
+export SECRET_KEY=<random-secret-key>
+export DATABASE_NAME=<database_name>
+export DATABASE_USER=<database_user>
+export DATABASE_PASSWORD=<database_password>
+export DATABASE_HOST=<database_host>
+export DATABASE_PORT=<database_post>
+
 python manage.py migrate
 python createsuperuser
 ```
