@@ -8,6 +8,7 @@ disable=
     missing-class-docstring,
     missing-function-docstring,
     too-few-public-methods,
+    no-self-use,
 
     # TODO: Remove when fix envirioment pre-commit pylint hook
     import-error,

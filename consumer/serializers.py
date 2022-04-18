@@ -1,5 +1,6 @@
 from rest_framework import serializers
 
 
-class TodoSerializer(serializers.Serializer):
-    pass
+class ToDoSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
+    title = serializers.CharField()
