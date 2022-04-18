@@ -1,6 +1,7 @@
 from rest_framework.viewsets import GenericViewSet
 from rest_framework.mixins import ListModelMixin
 from rest_framework.response import Response
+from rest_framework.status import HTTP_500_INTERNAL_SERVER_ERROR
 
 from consumer.services.external_api_service import (
     ExternalAPIService,
@@ -23,4 +24,6 @@ class ExternalAPIViewSet(GenericViewSet, ListModelMixin):
             return super().list(*args, **kwargs)
         except (TypeError, ExternalAPIServiceException) as e:
             error_data = dict(error=str(e))
-            return Response(ErrorSerializer(error_data).data)
+            return Response(
+                ErrorSerializer(error_data).data, status=HTTP_500_INTERNAL_SERVER_ERROR
+            )
