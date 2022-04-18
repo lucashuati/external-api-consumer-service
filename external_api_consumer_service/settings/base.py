@@ -50,6 +50,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "helpers.middlewares.ResponseLogMiddleware",
 ]
 
 ROOT_URLCONF = "external_api_consumer_service.urls"
